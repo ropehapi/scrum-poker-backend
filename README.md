@@ -14,3 +14,38 @@ Para acessar o banco de dados, basta acessar o painel do pgAdmin no seu navegado
 ### Comandos:
 - `$ git clone https://github.com/ropehapi/scrum-poker-backend.git`
 - `$ docker-compose up`
+
+## Endpoints
+- Players
+    - Index
+        - Method: GET
+        - Endpoint: /players
+    - Show
+        - Method: GET
+        - Endpoint: /player/{id}
+    - Store
+        - Method: POST
+        - Endpoint: /player
+        - Body Ex:
+
+            {
+                "name":"Tainara Queiroz de Marchi",
+                "email":"taiqdm@gmail.com",
+                "password":"Tainara0123",
+                "role":"GUEST"
+            }
+    - Update
+        - Method: PUT
+        - Endpoint: /player/{id}
+        - Body Ex:
+
+            {
+                "name":"Pedro Monteiro Yoshimura",
+                "email":"ropehapi@gmail.com",
+                "password":"Tainara0123",
+                "role":"GUEST"
+            }
+
+    - Delete
+        - Method: DELETE
+        - Endpoint: /player/{id}
