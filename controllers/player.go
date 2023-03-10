@@ -31,8 +31,8 @@ func Store(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(player)
 }
 
-func Update(w http.ResponseWriter, r *http.Request){
-	vars := mux.Vars(r);
+func Update(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
 	id := vars["id"]
 
 	var player models.Player
@@ -42,7 +42,7 @@ func Update(w http.ResponseWriter, r *http.Request){
 	json.NewEncoder(w).Encode(player)
 }
 
-func Delete(w http.ResponseWriter, r *http.Request){
+func Delete(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
 

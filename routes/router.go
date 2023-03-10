@@ -16,5 +16,7 @@ func HandleRequests() {
 	r.HandleFunc("/player/{id}", controllers.Update).Methods("PUT")
 	r.HandleFunc("/player/{id}", controllers.Delete).Methods("DELETE")
 
+	r.HandleFunc("/games", controllers.GameIndex).Methods("GET")
+
 	log.Fatal(http.ListenAndServe(":8000", r))
 }
